@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>iCoder- Heaven for programmers</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">iCoder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Topics
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Technology" target="_blank">Technology</a></li>
+                            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Web_development" target="_blank">Web Development</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="contact.html">Support</a></li>
+                            <li>
+                                <hr class="write-divider">
+                            </li>
+                            <li><a class="write" href="contact.html">Write for us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search" >
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search" oninput="SearchFunction()">
+                    <div id="searchResults"></div>
+                    <button class="btn btn-outline-success" type="submit" onclick="SearchFunction()">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4" id="ContactUs">
+        <h2>Contact Us</h2>
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Name</label>
+                <input type="text" class="form-control" id="exampleNameFormControlInput1" placeholder="Your name">
+                <div id="contactnameError" class="contactError" style="color: red;">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Email address</label>
+                    <input type="email" class="form-control" id="exampleEmailFormControlInput1"
+                        placeholder="name@example.com">
+                    <div id="contactemailError" class="contactError" style="color: red;"></div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Select your query</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Web</option>
+                        <option>Tech Stack</option>
+                        <option>Technology</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+
+                <div class="form-group-row">
+                    <div class="col-sm-2">Are you a member?</div>
+                    <div class="col-sm-1">
+                        <div class="form-check">
+                            <input type="checkbox" id="gridcheck1" class="form-check-input">
+                            <label for="gridcheck1" class="form-check-label">Yes</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" id="gridcheck2" class="form-check-input">
+                            <label for="gridcheck2" class="form-check-label">No</label>
+                        </div>
+                        <div id="checkError" class="contactError" style="color: red;"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Elaborate your concern (Optional)</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        placeholder="Feedback"></textarea>
+                </div>
+                <button class="btn btn-primary my-4" onclick="ContactSubmit()">Submit</button>
+                <div id="contactSubmit" style="color: green;"></div>
+
+        </form>
+    </div>
+
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2024-25 iCoder, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+
+    <script src="index.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    -->
+    <!--function ContactSubmit() {
+            let ContactNameMessage = document.getElementById('contactnameError');
+            let ContactEmailMessage = document.getElementById('contactemailError');
+            let GridCheckMessage = document.getElementById('checkError');
+
+
+            let contactName = document.getElementById('exampleNameFormControlInput1').value;
+            let contactEmail = document.getElementById('exampleEmailFormControlInput1').value;
+            let GridCheckMessage1 = document.getElementById('gridcheck1');
+            let GridCheckMessage2 = document.getElementById('gridcheck2');
+
+            let submission = true;
+            if (contactName === '') {
+                ContactNameMessage.textContent = 'Enter your name';
+                submission = false;
+            }
+
+
+            if (contactEmail === '') {
+                ContactEmailMessage.textContent = 'Enter your email';
+                submission = false;
+            }
+            if (!GridCheckMessage1.checked && !GridCheckMessage2.checked) {
+                GridCheckMessage.textContent = 'Choose 1 option above';
+                submission = false;
+            }
+            if (GridCheckMessage1.checked) {
+                GridCheckMessage2.disbaled = true;
+            }
+            if (GridCheckMessage2.checked) {
+                GridCheckMessage1.disbaled = true;
+            }
+            if (submission) {
+                document.getElementById('contactSubmit').textContent = 'Thank you for contacting us';
+                ContactNameMessage.textContent = '';
+                ContactEmailMessage.textContent = '';
+                GridCheckMessage.textContent = '';
+                let inputs3 = document.querySelectorAll
+                    ('#ContactUs input , #ContactUs textarea, #ContactUs button, #ContactUs select');
+                inputs3.forEach(input => input.disabled = true);
+            }
+            document.getElementById('ContactUs').addEventListener('submit', function (event) {
+                event.preventDefault();
+            })
+            const firstInvalidControl3 = document.querySelector('.contactError');
+            if (firstInvalidControl3) {
+                firstInvalidControl3.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+
+        }
+    </script>-->
+
+</body>
+
+</html>

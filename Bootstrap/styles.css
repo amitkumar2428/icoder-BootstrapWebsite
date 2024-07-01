@@ -1,0 +1,21 @@
+#searchResults {
+    background-color: white;
+    border: 1px ;
+    position: absolute;
+    z-index: 1000;
+    width: 200px;
+    list-style: none;  /* Removed default list styles */
+    padding: 0;        /* Removed default padding */
+    margin: 50px;         /* Removed default margin */
+}
+
+#searchResults .search-result {
+    padding: 10px;
+    cursor: pointer;
+    display: block;    /* Ensured each result takes the full width */
+    border-bottom: 1px solid #ddd;  /* Added a border between items */
+}
+
+#searchResults .search-result:last-child {
+    border-bottom: none;  /* Removed border from the last item */
+}
