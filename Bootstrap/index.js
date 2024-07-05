@@ -3,18 +3,18 @@ function SearchFunction() {
     const navItems = document.querySelectorAll('.nav-item > a, .dropdown-item');
     const resultsContainer = document.getElementById('searchResults');
 
-    resultsContainer.innerHTML = '';  // Clear previous results
+    resultsContainer.innerHTML = '';  // Cleared previous results
 
     const addedItems = new Set();  // To keep track of added items
 
     navItems.forEach(item => {
         if (item.textContent.toLowerCase().includes(input)) {
             if (!addedItems.has(item.textContent)) {
-                const clone = item.cloneNode(true); // Clone the matching item
-                clone.classList.remove('nav-link'); // Remove the nav-link class to avoid styling issues
-                clone.classList.add('search-result'); // Add a class for search results styling
-                resultsContainer.appendChild(clone); // Append the cloned item to the results container
-                addedItems.add(item.textContent);  // Add the item to the set
+                const clone = item.cloneNode(true); // Cloned the matching item
+                clone.classList.remove('nav-link'); // Removed the nav-link class to avoid styling issues
+                clone.classList.add('search-result'); // Added a class for search results styling
+                resultsContainer.appendChild(clone); // Appended the cloned item to the results container
+                addedItems.add(item.textContent);  // Added the item to the set
             }
         }
     });
